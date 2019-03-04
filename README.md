@@ -92,7 +92,9 @@ If you start with docker, the access is: http://dockerip:8443/cas
 1. Each stage will be sealed with a tag, and the required [Download] (https://github.com/kawhii/sso/releases)
 2. The original build file exists in the original-files directory.
 
-## Development [![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/ Projects/59b6afd60fb24f004e1a656b) [![codebeat badge](https://codebeat.co/badges/4b430ffd-0cb8-4310-b081-955a66e65c76)](https://codebeat.co/projects/github-com-laomazi2006-sso -master)
+## Development 
+[![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/Projects/59b6afd60fb24f004e1a656b) 
+[![codebeat badge](https://codebeat.co/badges/4b430ffd-0cb8-4310-b081-955a66e65c76)](https://codebeat.co/projects/github-com-laomazi2006-sso-master)
 
 * jdk8
 * maven3
