@@ -1,40 +1,40 @@
-# 证书生成（开启ssl时参考此文档）
+# Certificate generation (refer to this document when ssl is enabled)
 
-## 生成步骤
-各参数含义：
-  * -genkeypair 生成密钥
-  * -keyalg 指定密钥算法，这时指定RSA,
-  * -keysize 指定密钥长度，默认是1024位,这里指定2048，长一点，我让你破解不了（哈哈...）,
-  * -siglag 指定数字签名算法，这里指定为SHA1withRSA算法
-  * -validity 指定证书有效期，这里指定36500天，也就是100年，我想我的应用用不到那么长时间
-  * -alias 指定别名，这里是cas.server.com
-  * -keystore 指定密钥库存储位置，这里存在d盘
-  * -dname 指定用户信息，不用一个一个回答它的问题了；
+##Generation steps
+The meaning of each parameter:
+  * -genkeypair generates a key
+  * -keyalg specifies the key algorithm, then specify RSA,
+  * -keysize specifies the key length. The default is 1024 bits. Specify 2048 here, longer, I can't crack it (haha...),
+  * -siglag specifies the digital signature algorithm, specified here as the SHA1withRSA algorithm
+  * -validity specifies the validity period of the certificate. Here is 36500 days, which is 100 years. I think my application will not take so long.
+  * -alias specifies the alias, here is cas.server.com
+  * -keystore specifies the keystore storage location, where there is a d drive
+  * -dname specifies the user information, no need to answer its question one by one;
 
-注意：CN=域名，我们采用`passport.sso.com`
+Note: CN=domain name, we use `passport.sso.com`
 1.
 ```cmd
-keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA -validity 36500 -alias passport.sso.com -keystore d:/tomcat.keystore -dname "CN=passport.sso.com,OU=sunrizetech,O=esaleb,L=GuangZhou,ST=GuangDong,C=CN"
-# 输入上述命令，下面密码我们输入 123456,然后一直回车，就在d盘生成了tomcat.keystore文件；
+Keytool -genkeypair -keyalg RSA -keysize 2048 -sigalg SHA1withRSA -validity 36500 -alias passport.sso.com -keystore d:/tomcat.keystore -dname "CN=passport.sso.com,OU=sunrizetech,O=esaleb,L =GuangZhou,ST=GuangDong,C=CN"
+# Enter the above command, the following password we enter 123456, and then press Enter, the tomcat.keystore file is generated on the d drive;
 ```
 
-2.导出数字证书
-  在cmd下输入如下命令：
+2. Export digital certificate
+  Enter the following command under cmd:
 ```cmd
-keytool -exportcert -alias passport.sso.com -keystore d:/tomcat.keystore  -file d:/tomcat.cer -rfc
+Keytool -exportcert -alias passport.sso.com -keystore d:/tomcat.keystore -file d:/tomcat.cer -rfc
 ```
 
-3.将服务端的证书tomcat.cer导入到客户端java的cacerts证书库中
-cmd到 `${JAVA_HOME}jre\lib\security`
+3. Import the server's certificate tomcat.cer into the cacerts certificate store of the client java.
+Cmd to `${JAVA_HOME}jre\lib\security`
 
-运行如下命令：
+Run the following command:
 ```cmd
-keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\cacerts -file d:/tomcat.cer -trustcacerts
-# 密码为 changeit
+Keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\cacerts -file d:/tomcat.cer -trustcacerts
+#密码为changeit
 ```
 
-4.检查是否导入成功
+4. Check if the import is successful
 ```cmd
-keytool -list -keystore "%JAVA_HOME%\jre\lib\security\cacerts" | findstr/i server
+Keytool -list -keystore "%JAVA_HOME%\jre\lib\security\cacerts" | findstr/i server
 ```
-有东西输出代表成功
+Something outputs represent success

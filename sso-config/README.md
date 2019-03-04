@@ -1,4 +1,4 @@
-# 启动
+# start up
 
 ```cmd
 mvn spring-boot:run

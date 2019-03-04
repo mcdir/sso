@@ -1,1 +1,1 @@
-由于官网下载需要翻墙或其他原因，该目录保存了原始所需的构建文件
+Since the official website download needs to overturn the wall or other reasons, the directory saves the original required build files.

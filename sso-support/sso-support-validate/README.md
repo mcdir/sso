@@ -1,47 +1,46 @@
-# 验证模块接口说明文档
+#验证 module interface documentation
 
-* 信息发送者`ISender`（主导发送信息对象，例如发送校验码到手机，发送到邮箱）
-* 信息存储`IStore`（负责存储发送者发出的信息）
-* 信息生成器`InformativeGenerator`（负责生成发送者需要发送的信息）
-* 信息校验器`IValidator`（负责对数据进行校验）
+* The sender of the message `ISender` (leading to send information objects, such as sending a check code to the phone, sent to the mailbox)
+* Information storage `IStore` (responsible for storing information sent by the sender)
+* Information generator `InformativeGenerator` (responsible for generating the information that the sender needs to send)
+* Information Validator `IValidator` (responsible for verifying data)
 
-## 流程
-1. 信息生成器负责生成数据提供给信息发送者
-2. 发送成功保存
-3. 校验成功删除
+## Process
+1. The information generator is responsible for generating data for the sender of the message
+2. Send successfully saved
+3. Verify successful deletion
 
-## 配置
+## Configuration
 
 ```properties
-#验证码发送邮箱
-sso.validate.mail.enable=true
-sso.validate.mail.from=${spring.mail.username}
-sso.validate.mail.content=统一门户注册验证码为：%s
-sso.validate.mail.subject=统一门户注册
+Sso.validate.mail.enable=true
+Sso.validate.mail.from=${spring.mail.username}
+Sso.validate.mail.content=Unified portal registration verification code: %s
+Sso.validate.mail.subject=Unified Portal Registration
 ```
 
-## 程序发送
+## Program Send
 
 ```java
 @Autowired
-private DefaultValidateService validateService;
+Private DefaultValidateService validateService;
 
-//验证
+//verification
 @PostMapping
-public String registry(Model model, HttpServletRequest request, @Valid RegistryInfoVo registryInfoVo) {
-        ValidateResult result = validateService.validate(
-                new MailValidateCredential(request.getSession().getId(), registryInfoVo.getEmail(),
-                        "registry", registryInfoVo.getValidateCode()));
-    if (result == ValidateResult.FAIL) {
-        model.addAttribute("validateError", "验证码错误");
-    } else if (result == ValidateResult.EXPIRED) {
-        model.addAttribute("validateError", "验证码已过期");
-    }
-    return "registryView";
+Public String registry(Model model, HttpServletRequest request, @Valid RegistryInfoVo registryInfoVo) {
+        ValidateResult result = validateService.validate(
+                New MailValidateCredential(request.getSession().getId(), registryInfoVo.getEmail(),
+                        "registry", registryInfoVo.getValidateCode()));
+    If (result == ValidateResult.FAIL) {
+        model.addAttribute("validateError", "Verification code error");
+    } else if (result == ValidateResult.EXPIRED) {
+        model.addAttribute("validateError", "Verification code has expired");
+    }
+    Return "registryView";
 }
 
 
-//发送
+//send
 validateService.send(new MailCredential(request.getSession().getId(), mail, "registry"));
-           
+           
 ```

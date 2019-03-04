@@ -1,1 +1,1 @@
-> 该项目是集成了cas的客户端，目的是为了通过shiro、spring boot、pac4j的集成进行支持单点登录，并且支持了jwt而定认证方式
+> This project is a client integrated with cas, in order to support single sign-on through the integration of shiro, spring boot, pac4j, and support jwt authentication method

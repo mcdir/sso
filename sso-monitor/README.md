@@ -1,8 +1,8 @@
-# 认证中心监控平台
-监控各服务运行情况
+# Certification Center Monitoring Platform
+Monitor the operation of each service
 
-# 运行
-## 开发环境
+#run
+## Development Environment
 ```cmd
 java -jar sso-monitor.jar
 ```

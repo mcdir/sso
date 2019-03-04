@@ -1,4 +1,7 @@
-# [SSO](https://kawhii.github.io/sso/index.html) [![Build Status](https://travis-ci.org/kawhii/sso.svg?branch=master)]( Https://travis-ci.org/kawhii/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent .com/kawhii/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/kawhii/sso.svg)](https://github.com/kawhii/ Sso/issues)
+# [SSO](https://kawhii.github.io/sso/index.html) 
+[![Build Status](https://travis-ci.org/kawhii/sso.svg?branch=master)](Https://travis-ci.org/kawhii/sso) 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kawhii/sso/master/LICENSE) 
+[![GitHub issues](https://img.shields.io/github/issues/kawhii/sso.svg)](https://github.com/kawhii/Sso/issues)
 
 Create a single sign-on platform that includes the following subsystems
 
@@ -10,9 +13,8 @@ Create a single sign-on platform that includes the following subsystems
 
 And in the blog to record the entire build process and considerations, the current tutorial is as follows:
 
-[current tutorial] (http://img.blog.csdn.net/20171129213711953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/ SouthEast)
-
-[Monitor System] (http://img.blog.csdn.net/20171115154701467?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/ SouthEast)
+[current tutorial](http://img.blog.csdn.net/20171129213711953?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+[Monitor System](http://img.blog.csdn.net/20171115154701467?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 # Characteristic
 
@@ -36,7 +38,7 @@ And in the blog to record the entire build process and considerations, the curre
 * Check code login
 * Single user login
 
-## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/ Category/7156505)
+## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/Category/7156505)
 
 * [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
 * [Support](https://github.com/kawhii/sso/wiki)
@@ -73,9 +75,9 @@ If you start with docker, the access is: http://dockerip:8443/cas
 ## Module Introduction
 
 
-Module Name | Module Introduction | Port Status | Must Be https|path|Start Sequencing
-|:-------|:-------|:----|:-------|:-----|:--|
-|sso-server|cas服务|8443|√|cas|2|
+|Module Name| Module Introduction| Port Status| Must Be https|path|Start Sequencing |
+|:----------|:-------------------|:-----------|:-------------|:---|:---|
+|sso-server|cas|8443|√|cas|2|
 |sso-config|Configuration Center|8888|×|config|1|
 |sso-management|service management|8081|×|cas-management|3|
 |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
@@ -83,7 +85,9 @@ Module Name | Module Introduction | Port Status | Must Be https|path|Start Seque
 |sso-client-proxy-demo|OAuth2 proxy forwarding client|8808|×|/|6|
 |sso-monitor|Monitoring Services|8444|×|/|7|
 
-## Code Download [![Code Cloud](https://img.shields.io/badge/download-codecloud-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
+## Code Download 
+[![Code Cloud](https://img.shields.io/badge/download-codecloud-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) 
+[![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
 
 1. Each stage will be sealed with a tag, and the required [Download] (https://github.com/kawhii/sso/releases)
 2. The original build file exists in the original-files directory.
@@ -129,12 +133,12 @@ Build.cmd run
 ```
 
 
-* sso-config [Configuration Center] (http://localhost:8888/config)
-* sso-server [single sign-on service] (http://localhost:8443/cas)
-* cas-client-demo [cas client] (http://localhost:8080/sample)
-* shiro-client-demo [shiro client] (http://localhost:8083)
-* sso-management [service management client] (http://localhost:8081/cas-management)
-* sso-monitor [service monitoring] (http://localhost:8444)
+* sso-config [Configuration Center](http://localhost:8888/config)
+* sso-server [single sign-on service](http://localhost:8443/cas)
+* cas-client-demo [cas client](http://localhost:8080/sample)
+* shiro-client-demo [shiro client](http://localhost:8083)
+* sso-management [service management client](http://localhost:8081/cas-management)
+* sso-monitor [service monitoring](http://localhost:8444)
 
 ```cmd
 #server-id is the name of each service above,

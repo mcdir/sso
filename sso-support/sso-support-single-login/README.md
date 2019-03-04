@@ -1,1 +1,1 @@
-单用户登录，用户踢出
+Single user login, user kicks out
