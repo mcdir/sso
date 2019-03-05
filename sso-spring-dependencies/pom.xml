@@ -79,7 +79,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--为了加快速度，修改成国内的代理-->
+    <!--In order to speed up, modify it into a domestic agent-->
     <repositories>
         <repository>
             <releases>
@@ -91,7 +91,7 @@
         <repository>
             <snapshots>
                 <enabled>true</enabled>
-                <!--快照版本库两个小时检查更新一遍-->
+                <!--Snapshot repository for two hours to check for updates-->
                 <updatePolicy>interval:120</updatePolicy>
             </snapshots>
             <id>oss-snapshots</id>
@@ -109,5 +109,5 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <description>由于cas不能直接依赖spring-boot，所以其他项目统在此依赖</description>
+    <description>Since cas can't directly depend on spring-boot, other projects depend on it.</description>
 </project>

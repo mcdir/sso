@@ -18,7 +18,7 @@
     <packaging>war</packaging>
 
     <name>sso-server</name>
-    <description>CAS认证服务，负责各系统的鉴权的鉴权</description>
+    <description>CAS authentication service, responsible for authentication of authentication of each system</description>
 
     <dependencies>
         <!--mongodb存储客户端配置，持久化配置与客户端配置系统配置必须一致-->
@@ -136,7 +136,7 @@
                         <overlay>
                             <groupId>org.apereo.cas</groupId>
                             <artifactId>cas-server-webapp-tomcat</artifactId>
-                            <!--原有的服务不再初始化进去-->
+                            <!--The original service is no longer initialized-->
                             <excludes>
                                 <exclude>WEB-INF/classes/services/*</exclude>
                                 <exclude>WEB-INF/classes/application.*</exclude>

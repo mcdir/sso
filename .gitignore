@@ -174,3 +174,5 @@ fabric.properties
 **/target/
 
 **/build/
+
+.trash

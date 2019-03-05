@@ -116,11 +116,11 @@
             <AppenderRef ref="casConsole"/>
             <AppenderRef ref="casFile"/>
         </AsyncLogger>
-        <!--配置信息debug模式输出控制台-->
+        <!-- Configuration information debug mode output console -->
         <AsyncLogger name="org.apereo.cas.config" level="debug" additivity="false">
             <AppenderRef ref="casConsole"/>
         </AsyncLogger>
-        <!--多属性debug模式输出控制台-->
+        <!-- Multi-attribute debug mode output console -->
         <AsyncLogger name="org.apereo.services.persondir" level="debug" additivity="false">
             <AppenderRef ref="casConsole"/>
         </AsyncLogger>

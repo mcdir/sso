@@ -37,4 +37,8 @@ Keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\c
 ```cmd
 Keytool -list -keystore "%JAVA_HOME%\jre\lib\security\cacerts" | findstr/i server
 ```
+```bash
+keytool -list -keystore "$JAVA_HOME\jre\lib\security\cacerts" | grep server
+```
+
 Something outputs represent success

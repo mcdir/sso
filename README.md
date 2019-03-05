@@ -57,7 +57,7 @@ user:
 
 ---
 
-### [Docker Quick Launch] (https://hub.docker.com/r/kawhii/sso/)
+### [Docker Quick Launch](https://hub.docker.com/r/kawhii/sso/)
 
 * Currently only the configuration center and cas services are deployed to the docker environment*
 
@@ -65,8 +65,17 @@ user:
 Docker run -d --restart=always -p 8443:8443 kawhii/sso
 ```
 
+```bash
+docker run -d --restart=always -p 8443:8443 kawhii/sso
+```
+
 If you start with docker, the access is: http://dockerip:8443/cas
 
+# Update config 
+```bash
+docker cp ./sso-config/src/main/resources/config/sso-dev.properties china-sso-test:/usr/local/service/sso-config/src/main/resources/config/sso-dev.properties
+docker cp mycontainer:/foo.txt foo.txt
+```
 
 ### attention
 * Since the password change function is currently sent to the author's mailbox, if it is adjusted, you need to modify `sso-server/src/main/resources/profile/dev/sql/data-dev.sql`
@@ -89,7 +98,7 @@ If you start with docker, the access is: http://dockerip:8443/cas
 [![Code Cloud](https://img.shields.io/badge/download-codecloud-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) 
 [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
 
-1. Each stage will be sealed with a tag, and the required [Download] (https://github.com/kawhii/sso/releases)
+1. Each stage will be sealed with a tag, and the required [Download](https://github.com/kawhii/sso/releases)
 2. The original build file exists in the original-files directory.
 
 ## Development 
@@ -137,17 +146,23 @@ Build.cmd run
 
 * sso-config [Configuration Center](http://localhost:8888/config)
 * sso-server [single sign-on service](http://localhost:8443/cas)
+* dashboard  [dashboard](http://localhost:8443/cas/status/dashboard)
 * cas-client-demo [cas client](http://localhost:8080/sample)
 * shiro-client-demo [shiro client](http://localhost:8083)
 * sso-management [service management client](http://localhost:8081/cas-management)
 * sso-monitor [service monitoring](http://localhost:8444)
 
 ```cmd
-#server-id is the name of each service above,
-#如Start sso-management, build.cmd sso-management
+# server-id is the name of each service above,
+# Such as Start sso-management, build.cmd sso-management
 
 Build.cmd [server-id]
 ```
+
+# Test
+
+    mvn -Dtest=* test
+
 
 # Contact information
 
@@ -164,3 +179,5 @@ WeChat
 <img src="http://img.blog.csdn.net/20170908092906735?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast " width="230" height="230"/>
 Alipay
 <img src="http://img.blog.csdn.net/20170908100804669?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast " width="230" height="230"/>
+
+

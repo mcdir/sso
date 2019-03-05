@@ -34,12 +34,12 @@
         <springboot.version>1.5.3.RELEASE</springboot.version>
         <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <java.cas.client.version>3.4.1</java.cas.client.version>
-        <!--监控系统-->
+        <!--surveillance system-->
         <admin-server.version>1.5.3</admin-server.version>
     </properties>
 
 
-    <!--为了加快速度，修改成国内的代理-->
+    <!-- In order to speed up, modify it into a domestic agent -->
     <repositories>
         <repository>
             <releases>
@@ -61,7 +61,7 @@
     </pluginRepositories>
 
     <organization>
-        <name>卡尔科技工作室</name>
+        <name>Carl Technology Studio</name>
         <url>http://blog.csdn.net/u010475041</url>
     </organization>
 
@@ -73,7 +73,7 @@
                 <role>architect</role>
                 <role>developer</role>
             </roles>
-            <organization>卡尔科技工作室</organization>
+            <organization>Carl Technology Studio</organization>
         </developer>
     </developers>
     <build>

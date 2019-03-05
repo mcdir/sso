@@ -1,7 +1,7 @@
 logging:
   file: "logs/config/sso-config.log"
 info:
-  name : "配置中心"
+  name : "Configuration center"
 
 server:
   port: 8888

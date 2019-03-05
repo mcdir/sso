@@ -6,7 +6,10 @@ ENV PATH=$PATH:$JRE_HOME/bin
 RUN yum -y install maven
 
 RUN yum -y install wget tar unzip git \
-    && yum -y clean all
+    && yum -y clean all \
+    && yum install epel-release \
+    && yum install mc nano htop atool
+
 
 # Download Azul Java, verify the hash, and install \
 RUN set -x; \
@@ -22,7 +25,7 @@ RUN set -x; \
     && ln -s /opt/zulu$zulu_version-jdk$java_version-linux_x64/jre/ /opt/jre-home;
 
 
-EXPOSE 8888 8443
+EXPOSE 8443 8444 8888 8889 8081 8808 8080 8083
 
 ENV JAVA_HOME /opt/jre-home
 ENV PATH $PATH:$JAVA_HOME/bin:.
@@ -32,7 +35,21 @@ ADD . /usr/local/service
 RUN chmod +x /usr/local/service/run-cas.sh;
 
 WORKDIR /usr/local/service
+
+# build all and install
 RUN mvn install
+
+# sso-management
+RUN cd /usr/local/service/sso-management \
+    && mvn install
+
+# sso-management
+RUN cd /usr/local/service/sso-monitor \
+    && mvn install
+
+# sso-management
+RUN cd /usr/local/service/sso-client-demo \
+    && mvn install
 
 #RUN java -jar sso-config/target/sso-config.jar &
 #CMD ["java","-jar","sso-server/target/cas.war"]

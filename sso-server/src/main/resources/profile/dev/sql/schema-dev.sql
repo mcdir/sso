@@ -1,5 +1,5 @@
 /*
-账号表
+Account form
 */
 CREATE TABLE SYS_USER (
   USERNAME VARCHAR(30) PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE TABLE SYS_USER (
   DISABLE INT
 );
 /*
-账号加盐表
+Account plus salt table
 */
 CREATE TABLE SYS_USER_ENCODE (
   USERNAME VARCHAR(30) PRIMARY KEY,
@@ -23,7 +23,7 @@ CREATE TABLE SYS_USER_ENCODE (
   DISABLED INT
 );
 /*
-密码重置问题表
+Password reset problem table
 */
 CREATE TABLE SYS_USER_QUESTION (
   USERNAME VARCHAR(30) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE SYS_USER_QUESTION (
 );
 
 /*
-* 用户属性表
+* User attribute table
 */
 CREATE TABLE SYS_ATTRS (
   USERNAME VARCHAR(30) NOT NULL,
