@@ -1,1 +1,1 @@
-> JSON服务的配置可以存放在这里
+> JSON service configuration can be stored here
