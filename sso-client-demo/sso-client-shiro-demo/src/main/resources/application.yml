@@ -1,3 +1,5 @@
+base:
+  url: localhost
 spring:
   application:
     name: shiro-client

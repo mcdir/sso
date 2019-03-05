@@ -1,3 +1,5 @@
+base:
+  url: localhost
 spring:
   application:
     name: cas-management
@@ -23,5 +25,5 @@ spring:
   profiles: dev
   cloud:
     config:
-      uri: http://localhost:8888/config
+      uri: http://${base.url}:8888/config
 ---

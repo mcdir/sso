@@ -1,7 +1,9 @@
+base:
+  url: localhost
 logging:
   file: "logs/sso-demo-proxy.log"
 info:
-  name: 代理登录请求
+  name: "Proxy login request"
 
 server:
   port: 8808

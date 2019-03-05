@@ -1,17 +1,19 @@
-#必须指定配置文件，否则监控系统无法获取
+# The configuration file must be specified or the monitoring system cannot obtain
+base:
+  url: localhost
 logging:
   file: "logs/monitor/monitor-server.log"
 info:
-  name: "监控系统"
+  name: "surveillance system"
 ---
 spring:
   application:
     name: sso-monitor
   profiles:
     active:
-      # 启用安全配置
+      # Enable security configuration
       - dev
-# 当前项目端口
+# Current project port
 server:
   port: 8444
 
@@ -20,7 +22,7 @@ spring:
   profiles: dev
   boot:
     admin:
-      url: http://localhost:8444/
+      url: http://${base.url}:8444/
       client:
         management-base-url: ${spring.boot.admin.url}
         management-url: ${spring.boot.admin.url}
