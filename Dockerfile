@@ -7,8 +7,8 @@ RUN yum -y install maven
 
 RUN yum -y install wget tar unzip git \
     && yum -y clean all \
-    && yum install epel-release \
-    && yum install mc nano htop atool
+    && yum -y install epel-release \
+    && yum -y install mc nano htop atool
 
 
 # Download Azul Java, verify the hash, and install \

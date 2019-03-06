@@ -16,3 +16,25 @@ services:
       - 8080:8080 #  |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
       - 8083:8083 #  |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
       #- 5000:5000 # debug, https://blog.csdn.net/u010475041/article/details/78623405
+  mongodb:
+    image: 'bitnami/mongodb:3.6'
+    container_name: china-sso-mongodb-3-6-primary
+#    host: 'mongodb-server'
+    ports:
+      - "27017:27017"
+    environment:
+#      - ALLOW_EMPTY_PASSWORD=yes
+      - MONGODB_EXTRA_FLAGS=--wiredTigerCacheSizeGB=2
+#      - MONGODB_SYSTEM_LOG_VERBOSITY=3
+      - MONGODB_ENABLE_DIRECTORY_PER_DB=yes
+      - MONGODB_USERNAME=cas-config
+      - MONGODB_PASSWORD=123456
+      - MONGODB_ROOT_PASSWORD=123456
+      - MONGODB_DATABASE=cas-config
+    volumes:
+      - 'mongodb_data:/bitnami'
+
+
+volumes:
+  mongodb_data:
+    driver: local
