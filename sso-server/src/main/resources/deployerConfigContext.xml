@@ -8,6 +8,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
-
+   <!-- sso-server/src/main/resources/profile/dev/application-dev.xml -->
    <import resource="classpath*:profile/${spring.profiles.active}/application-${spring.profiles.active}.xml"></import>
 </beans>

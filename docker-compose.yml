@@ -19,7 +19,6 @@ services:
   mongodb:
     image: 'bitnami/mongodb:3.6'
     container_name: china-sso-mongodb-3-6-primary
-#    host: 'mongodb-server'
     ports:
       - "27017:27017"
     environment:
@@ -30,10 +29,9 @@ services:
       - MONGODB_USERNAME=cas-config
       - MONGODB_PASSWORD=123456
       - MONGODB_ROOT_PASSWORD=123456
-      - MONGODB_DATABASE=cas-config
+      - MONGODB_DATABASE=cas-mongo-database
     volumes:
       - 'mongodb_data:/bitnami'
-
 
 volumes:
   mongodb_data:

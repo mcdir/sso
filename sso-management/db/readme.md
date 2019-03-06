@@ -1,22 +1,22 @@
 ```cmd
-#启动
+#start up
 >mongod.exe
 
-#登录
+#log in
 >mongo
 
-#切换数据库
+#Switch database
 >use admin
 
-#新增管理员
+#Add administrator
 >db.createUser({user: "admin",pwd: "123456",roles:[{role:"userAdminAnyDatabase", db: "admin" } ]})
 
-#切换数据库
+#Switch database
 >use cas-mongo-database
 
-# 新增用户
+# New users
 >db.createUser({user: "cas-config",pwd: "123456",roles: [ { role: "readWrite", db: "cas-mongo-database" }]})
 
-#重启并开启认证
+# Restart and enable authentication
 >mongod.exe --auth
 ```

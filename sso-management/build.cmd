@@ -2,7 +2,7 @@
 
 set CAS_DIR=\etc\cas
 set CONFIG_DIR=\etc\cas\config
-set DNAME="CN = cas.example.org OU = Example OU = Org  C = US"
+set DNAME="CN = passport.sso.com OU = Example OU = Org  C = US"
 
 @rem Check for mvn in path, use it if found, otherwise use maven wrapper
 @set MAVEN_CMD=mvn

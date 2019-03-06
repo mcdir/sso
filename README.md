@@ -3,7 +3,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kawhii/sso/master/LICENSE) 
 [![GitHub issues](https://img.shields.io/github/issues/kawhii/sso.svg)](https://github.com/kawhii/Sso/issues)
 
-Create a single sign-on platform that includes the following subsystems
+# Create a single sign-on platform that includes the following subsystems
 
 * CAS SERVER
 * Configuration Center
@@ -83,7 +83,6 @@ docker cp mycontainer:/foo.txt foo.txt
 
 ## Module Introduction
 
-
 |Module Name| Module Introduction| Port Status| Must Be https|path|Start Sequencing |
 |:----------|:-------------------|:-----------|:-------------|:---|:---|
 |sso-server|cas|8443|√|cas|2|
@@ -142,7 +141,7 @@ Build.cmd init
 ```cmd
 Build.cmd run
 ```
-
+### Http:
 
 * sso-config [Configuration Center](http://localhost:8888/config)
 * sso-server [single sign-on service](http://localhost:8443/cas)
@@ -151,6 +150,29 @@ Build.cmd run
 * shiro-client-demo [shiro client](http://localhost:8083)
 * sso-management [service management client](http://localhost:8081/cas-management)
 * sso-monitor [service monitoring](http://localhost:8444)
+
+### https
+
+* sso-config [Configuration Center](https://passport.sso.com:8888/config)
+* sso-server [single sign-on service](https://passport.sso.com:8443/cas)
+* dashboard  [dashboard](https://passport.sso.com:8443/cas/status/dashboard)
+* cas-client-demo [cas client](https://passport.sso.com:8080/sample)
+* shiro-client-demo [shiro client](https://passport.sso.com:8083)
+* sso-management [service management client](https://passport.sso.com:8081/cas-management)
+* sso-monitor [service monitoring](https://passport.sso.com:8444)
+
+
+# SSL
+[install keystore-explorer](https://keystore-explorer.org/downloads.html)
+
+keytool -genkey -keyalg RSA -alias cas -keystore ./tomcat.keystore -storepass 123456 -validity 9999 -keysize 2048 -dname "cn=passport.sso.com, ou=MyOU, o=MyCompany, c=EN, st=Nord, l=MyCity" 
+keytool -genkey -keyalg RSA -alias cas -keystore ./cacerts -storepass changeit -validity 9999 -keysize 2048 -dname "cn=passport.sso.com, ou=MyOU, o=MyCompany, c=EN, st=Nord, l=MyCity"
+![example](sso-server/build.sh)
+pass 123456
+keytool -import -alias passport.sso.com -keystore "%JAVA_HOME%/jre/lib/security/cacerts" -file tomcat.cer -trustcacerts
+keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts" -file ./tomcat.cer -trustcacerts
+
+
 
 ```cmd
 # server-id is the name of each service above,
@@ -162,6 +184,18 @@ Build.cmd [server-id]
 # Test
 
     mvn -Dtest=* test
+
+# overlays
+
+[cas-overlay-template](https://github.com/apereo/cas-overlay-template)
+[cas-management-overlay](https://github.com/apereo/cas-management-overlay)
+[cas-configserver-overlay](https://github.com/apereo/cas-configserver-overlay)
+
+# apache
+[mod_auth_cas](https://github.com/apereo/mod_auth_cas)
+
+# client sdk
+[phpCAS](https://github.com/apereo/phpCAS)
 
 
 # Contact information

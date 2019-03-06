@@ -1,0 +1,11 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId": "^(https|imaps|http)://.*",
+  "name": "passport.sso.com Services",
+  "id": 10000005,
+  "description": "this is a passport.sso.com service",
+  "evaluationOrder": 10000005,
+  "attributeReleasePolicy": {
+    "@class": "org.apereo.cas.services.ReturnAllAttributeReleasePolicy"
+  }
+}

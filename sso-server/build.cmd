@@ -5,7 +5,7 @@
 @set CONFIG_DIR=\etc\cas\config
 
 @rem Call this script with DNAME and CERT_SUBJ_ALT_NAMES already set to override
-@if "%DNAME%" == "" set DNAME=CN=cas.example.org,OU=Example,OU=Org,C=US
+@if "%DNAME%" == "" set DNAME=CN=passport.sso.com,OU=Example,OU=Org,C=US
 @rem List other host names or ip addresses you want in your certificate, may help with host name verification, 
 @rem   if client apps make https connection for ticket validation and compare name in cert (include sub. alt. names) 
 @rem   to name used to access CAS
