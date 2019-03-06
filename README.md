@@ -159,7 +159,7 @@ Build.cmd run
 * cas-client-demo [cas client](https://passport.sso.com:8080/sample)
 * shiro-client-demo [shiro client](https://passport.sso.com:8083)
 * sso-management [service management client](https://passport.sso.com:8081/cas-management)
-* sso-monitor [service monitoring](https://passport.sso.com:8444)
+* sso-monitor [service monitoring](http://passport.sso.com:8444)
 
 
 # SSL

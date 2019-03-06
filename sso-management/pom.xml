@@ -44,7 +44,7 @@
                         <overlay>
                             <groupId>org.apereo.cas</groupId>
                             <artifactId>cas-management-webapp</artifactId>
-                            <!--原有的服务不再初始化进去-->
+                            <!--The original service is no longer initialized-->
                             <excludes>
                                 <exclude>**/services/*</exclude>
                                 <exclude>**/application.properties</exclude>
@@ -64,12 +64,12 @@
     </build>
 
     <dependencies>
-        <!--mongodb存储客户端配置，持久化配置与客户端配置系统配置必须一致-->
-        <!--<dependency>
+        <!--mongodb Storage client configuration, persistent configuration must be consistent with client configuration system configuration -->
+        <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-mongo-service-registry</artifactId>
             <version>${cas.version}</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-management-webapp</artifactId>

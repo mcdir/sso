@@ -44,7 +44,7 @@ tmux splitw -v -p 50
 tmux send-keys "bash" C-m
 
 tmux selectp -t 0
-tmux send-keys "exec java -jar ./sso-config/target/sso-config.jar" C-m
+tmux send-keys "sleep 3 && exec java -jar ./sso-config/target/sso-config.jar" C-m
 #tmux send-keys "bash" C-m
 
 ## Select pane 1
@@ -54,7 +54,7 @@ tmux send-keys "sleep 20 && exec java -jar ./sso-server/target/cas.war" C-m
 
 ## select pane 2
 tmux selectp -t 2
-tmux send-keys "sleep 30 && exec java -jar ./sso-monitor/target/sso-monitor.jar" C-m
+tmux send-keys "exec java -jar ./sso-monitor/target/sso-monitor.jar" C-m
 
 tmux selectp -t 3
 #tmux send-keys "exec java -jar ./sso-support/sso-support-captcha/target/sso-support-captcha.jar" C-m
