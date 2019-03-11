@@ -154,8 +154,12 @@ Build.cmd run
 
 ### http
 * sso-config [Configuration Center](http://passport.sso.com:8888/config) 
-* sso-config-dev [sso-config-dev](http://passport.sso.com:8888/config/sso/dev)
 * sso-monitor [service monitoring](http://passport.sso.com:8444)
+
+# config 
+
+sso-config json [sso-config-json](http://passport.sso.com:8888/config/sso/dev)
+sso-config-properties [sso-config-properties](http://passport.sso.com:8888/config/sso-dev.properties)
 
 ### https
 

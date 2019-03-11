@@ -31,8 +31,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <cas.version>5.2.0</cas.version>
-        <springboot.version>1.5.9.RELEASE</springboot.version>
-        <spring-cloud.version>Dalston.SR5</spring-cloud.version>
+        <springboot.version>1.5.3.RELEASE</springboot.version>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <java.cas.client.version>3.4.1</java.cas.client.version>
         <!--surveillance system-->
         <admin-server.version>1.5.5</admin-server.version>
