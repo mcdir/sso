@@ -24,7 +24,7 @@ And in the blog to record the entire build process and considerations, the curre
 * jdbc user password encryption
 * Custom theme
 * Configure unified management
-* Iterate according to the new version of the official website 5.1.x
+* Iterate according to the new version of the official website 5.2.x
 * Publish blog tutorials at various stages
 * Password management
 * one-button start
@@ -154,6 +154,7 @@ Build.cmd run
 
 ### http
 * sso-config [Configuration Center](http://passport.sso.com:8888/config) 
+* sso-config-dev [sso-config-dev](http://passport.sso.com:8888/config/sso/dev)
 * sso-monitor [service monitoring](http://passport.sso.com:8444)
 
 ### https
