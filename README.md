@@ -151,19 +151,24 @@ Build.cmd run
 * sso-management [service management client](http://localhost:8081/cas-management)
 * sso-monitor [service monitoring](http://localhost:8444)
 
+
+### http
+* sso-config [Configuration Center](http://passport.sso.com:8888/config) 
+* sso-monitor [service monitoring](http://passport.sso.com:8444)
+
 ### https
 
-* sso-config [Configuration Center](https://passport.sso.com:8888/config)
 * sso-server [single sign-on service](https://passport.sso.com:8443/cas)
 * dashboard  [dashboard](https://passport.sso.com:8443/cas/status/dashboard)
 * cas-client-demo [cas client](https://passport.sso.com:8080/sample)
 * shiro-client-demo [shiro client](https://passport.sso.com:8083)
 * sso-management [service management client](https://passport.sso.com:8081/cas-management)
-* sso-monitor [service monitoring](http://passport.sso.com:8444)
 
 
 # SSL
 [install keystore-explorer](https://keystore-explorer.org/downloads.html)
+
+**Run under root**
 
 keytool -genkey -keyalg RSA -alias cas -keystore ./tomcat.keystore -storepass 123456 -validity 9999 -keysize 2048 -dname "cn=passport.sso.com, ou=MyOU, o=MyCompany, c=EN, st=Nord, l=MyCity" 
 keytool -genkey -keyalg RSA -alias cas -keystore ./cacerts -storepass changeit -validity 9999 -keysize 2048 -dname "cn=passport.sso.com, ou=MyOU, o=MyCompany, c=EN, st=Nord, l=MyCity"
@@ -171,7 +176,8 @@ keytool -genkey -keyalg RSA -alias cas -keystore ./cacerts -storepass changeit -
 pass 123456
 keytool -import -alias passport.sso.com -keystore "%JAVA_HOME%/jre/lib/security/cacerts" -file tomcat.cer -trustcacerts
 keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts" -file ./tomcat.cer -trustcacerts
-
+keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts" -file ./sso-server/src/main/resources/tomcat.cer -trustcacerts
+keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts" -file ./sso-server/src/main/resources/tomcat.cer -trustcacerts
 
 
 ```cmd

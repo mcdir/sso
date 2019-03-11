@@ -21,31 +21,32 @@
     <description>CAS authentication service, responsible for authentication of authentication of each system</description>
 
     <dependencies>
-        <!--mongodb存储客户端配置，持久化配置与客户端配置系统配置必须一致-->
-        <!--<dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-mongo-service-registry</artifactId>
-            <version>${cas.version}</version>
-        </dependency>-->
-        <!--自定义校验器-->
+        <!--Mongodb storage client configuration, persistent configuration must be
+            consistent with client configuration system configuration-->
+        <!--<dependency>-->
+            <!--<groupId>org.apereo.cas</groupId>-->
+            <!--<artifactId>cas-server-support-mongo-service-registry</artifactId>-->
+            <!--<version>${cas.version}</version>-->
+        <!--</dependency>-->
+        <!-- Custom checker -->
         <dependency>
             <groupId>com.carl.auth</groupId>
             <artifactId>sso-support-custom-auth</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--单用户登录-->
+        <!-- Single user login -->
         <dependency>
             <groupId>com.carl.auth</groupId>
             <artifactId>sso-support-single-login</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--校验码-->
+        <!-- Check code -->
         <dependency>
             <groupId>com.carl.auth</groupId>
             <artifactId>sso-support-captcha</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!--代理认证-->
+        <!-- Agency certification -->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-pac4j-webflow</artifactId>
@@ -58,13 +59,13 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
-        <!--jdbc认证-->
+        <!--Jdbc certification-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-jdbc</artifactId>
             <version>${cas.version}</version>
         </dependency>
-        <!-- hsqldb驱动 -->
+        <!-- Hsqldb driver -->
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
@@ -76,7 +77,7 @@
             <version>${springboot.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--支持rest方式登录-->
+        <!--Support rest mode login-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-rest</artifactId>
@@ -87,6 +88,12 @@
             <artifactId>cas-server-support-bootadmin-client</artifactId>
             <version>${cas.version}</version>
         </dependency>
+        <!-- JWT -->
+        <!--<dependency>-->
+            <!--<groupId>org.apereo.cas</groupId>-->
+            <!--<artifactId>cas-server-support-token-webflow</artifactId>-->
+            <!--<version>${cas.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
     <dependencyManagement>
         <dependencies>

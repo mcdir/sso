@@ -16,6 +16,11 @@ services:
       - 8080:8080 #  |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
       - 8083:8083 #  |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
       #- 5000:5000 # debug, https://blog.csdn.net/u010475041/article/details/78623405
+    depends_on:
+      - mongodb
+    extra_hosts:
+      - "passport.sso.com:127.0.0.1"
+
   mongodb:
     image: 'bitnami/mongodb:3.6'
     container_name: china-sso-mongodb-3-6-primary

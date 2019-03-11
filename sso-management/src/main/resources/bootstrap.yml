@@ -1,5 +1,5 @@
 base:
-  url: localhost
+  url: passport.sso.com
 spring:
   application:
     name: cas-management
@@ -26,4 +26,12 @@ spring:
   cloud:
     config:
       uri: http://${base.url}:8888/config
+  boot:
+    admin:
+      # sso-monitor
+      url: http://${base.url}:8444/
+#      client:
+#        management-base-url: http://${base.url}:${server.port}${server.context-path}
+#        management-url: ${spring.boot.admin.client.management-base-url}
+#        service-url: ${spring.boot.admin.client.management-base-url}
 ---

@@ -1,6 +1,5 @@
 base:
   url: passport.sso.com
-  local: localhost
 logging:
   file: "logs/config/sso-config.log"
 info:
@@ -24,9 +23,9 @@ spring:
   boot:
     admin:
       # sso-monitor
-      url: http://${base.local}:8444/
+      url: http://${base.url}:8444/
       client:
-        management-base-url: https://${base.url}:${server.port}${server.context-path}
+        management-base-url: http://${base.url}:${server.port}${server.context-path}
         management-url: ${spring.boot.admin.client.management-base-url}
         service-url: ${spring.boot.admin.client.management-base-url}
 management:

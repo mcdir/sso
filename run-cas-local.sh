@@ -1,27 +1,4 @@
 #!/bin/bash
-#export JAVA_HOME=/opt/jre-home
-#export PATH=$PATH:$JAVA_HOME/bin:.
-#exec java -jar ./sso-config/target/sso-config.jar &
-#sleep 30s
-#exec java -jar ./sso-server/target/cas.war
-
-#exec java -jar ./sso-management/target/cas-management.war
-
-
-#tmux new-session -d -s mySession -n myWindow
-#tmux send-keys -t mySession:myWindow "cd ~" Enter
-#tmux send-keys -t mySession:myWindow "nano" Enter
-#tmux attach -t mySession:myWindow
-
-#tmux new-session -d -s whatever -n myWindow
-#session=whatever
-#window=${session}:0
-#pane=${window}.4
-#tmux send-keys -t "$pane" C-z 'some -new command' Enter
-#tmux select-pane -t "$pane"
-#tmux select-window -t "$window"
-#tmux attach-session -t "$session"
-
 # global session
 session="work"
 

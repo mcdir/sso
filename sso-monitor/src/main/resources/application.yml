@@ -1,6 +1,6 @@
 # The configuration file must be specified or the monitoring system cannot obtain
 base:
-  url: localhost
+  url: passport.sso.com
 logging:
   file: "logs/monitor/monitor-server.log"
 info:

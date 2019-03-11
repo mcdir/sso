@@ -1,9 +1,10 @@
 logging:
   file: "logs/config/sso-config.log"
 info:
-  name : "配置中心"
+  name : "Configuration center"
 
 server:
+  # sso-config http
   port: 8888
   context-path: /config
 spring:
@@ -20,7 +21,7 @@ spring:
   profiles: dev
   mail:
     #发送邮件
-    host: smtp.qq.com
+    host: smtp.localhost
     port: 587
     #邮箱用户名
     username: huang.wenbin@foxmail.com
