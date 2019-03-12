@@ -16,6 +16,9 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+CREATE DATABASE IF NOT EXISTS `cas-mysql-database` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `cas-mysql-database`;
+
 -- ----------------------------
 -- Table structure for sys_attrs
 -- ----------------------------

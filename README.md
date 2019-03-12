@@ -45,6 +45,8 @@ And in the blog to record the entire build process and considerations, the curre
 
 # build and run locally
 
+    docker-compose -f docker-mongo.yml up
+    docker-compose -f docker-mysql.yml up
     ./build.sh && ./run-cas-local.sh 
 
 Domain name: localhost
