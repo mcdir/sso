@@ -7,8 +7,6 @@
  Target Server Type    : MongoDB
  Target Server Version : 30611
  File Encoding         : 65001
-
- Date: 12/03/2019 17:29:26
 */
 
 // ----------------------------

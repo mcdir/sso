@@ -2,7 +2,7 @@ version: '2'
 services:
   sso:
     image: china-sso-test-image:latest
-    container_name: china-sso-test
+    container_name: china-sso-test-5-2-6
     build:
       context: .
       dockerfile: Dockerfile

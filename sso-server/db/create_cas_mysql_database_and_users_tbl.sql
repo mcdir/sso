@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `email`, `password`) VALUES
-	(1, 'test@test.com', 'test');
+INSERT INTO `users` (`id`, `email`, `password`) VALUES 	(1, 'test@test.com', 'test');
+INSERT INTO `users` (`id`, `email`, `password`) VALUES 	(2, 'admin', 'admin');
+INSERT INTO `users` (`id`, `email`, `password`) VALUES 	(3, 'root', 'root');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;

@@ -20,12 +20,9 @@ spring:
 spring:
   profiles: dev
   mail:
-    #发送邮件
     host: smtp.localhost
     port: 587
-    #邮箱用户名
     username: huang.wenbin@foxmail.com
-    #邮箱授权码
     password: judnarjvmhsfbdji
     testConnection: false
     properties:
