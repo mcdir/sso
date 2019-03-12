@@ -43,6 +43,10 @@ And in the blog to record the entire build process and considerations, the curre
 * [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
 * [Support](https://github.com/kawhii/sso/wiki)
 
+# build and run locally
+
+    ./build.sh && ./run-cas-local.sh 
+
 Domain name: localhost
 
 user:
@@ -207,6 +211,11 @@ Build.cmd [server-id]
 
 # client sdk
 [phpCAS](https://github.com/apereo/phpCAS)
+
+
+# Release note
+
+[520rc1-release](https://apereo.github.io/2017/06/30/520rc1-release/)
 
 
 # Contact information
