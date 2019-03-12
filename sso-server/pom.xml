@@ -10,7 +10,7 @@
     <parent>
         <groupId>com.carl.auth</groupId>
         <artifactId>sso</artifactId>
-        <version>1.7.9-SNAPSHOT</version>
+        <version>1.8.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -29,23 +29,23 @@
             <!--<version>${cas.version}</version>-->
         <!--</dependency>-->
         <!-- Custom checker -->
-        <dependency>
-            <groupId>com.carl.auth</groupId>
-            <artifactId>sso-support-custom-auth</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.carl.auth</groupId>-->
+            <!--<artifactId>sso-support-custom-auth</artifactId>-->
+            <!--<version>${project.version}</version>-->
+        <!--</dependency>-->
         <!-- Single user login -->
-        <dependency>
-            <groupId>com.carl.auth</groupId>
-            <artifactId>sso-support-single-login</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.carl.auth</groupId>-->
+            <!--<artifactId>sso-support-single-login</artifactId>-->
+            <!--<version>${project.version}</version>-->
+        <!--</dependency>-->
         <!-- Check code -->
-        <dependency>
-            <groupId>com.carl.auth</groupId>
-            <artifactId>sso-support-captcha</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.carl.auth</groupId>-->
+            <!--<artifactId>sso-support-captcha</artifactId>-->
+            <!--<version>${project.version}</version>-->
+        <!--</dependency>-->
         <!-- Agency certification -->
         <dependency>
             <groupId>org.apereo.cas</groupId>
