@@ -15,3 +15,5 @@ db.createUser(
     roles: [ { role: "readWrite", db: "cas-mongo-database" }]
   }
 )
+
+db.createCollection("cas-service-registry")

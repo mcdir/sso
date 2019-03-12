@@ -23,7 +23,7 @@ spring:
   boot:
     admin:
       # sso-monitor
-      url: http://${base.url}:8444/
+      url: http://${base.url}:8444
       client:
         management-base-url: http://${base.url}:${server.port}${server.context-path}
         management-url: ${spring.boot.admin.client.management-base-url}
