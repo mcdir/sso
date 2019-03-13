@@ -156,3 +156,4 @@ fabric.properties
 **/build/
 
 .trash
+utils/*.jar
