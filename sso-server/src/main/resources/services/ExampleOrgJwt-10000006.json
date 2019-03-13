@@ -1,0 +1,17 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "https://www.example.org",
+  "name" : "Example",
+  "id" : 1000,
+  "properties" : {
+    "@class" : "java.util.HashMap",
+    "jwtSigningSecret" : {
+      "@class" : "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+      "values" : [ "java.util.HashSet", [ "U1599FqxeVBsMI8EUVNkxFMEadD0vbbLSySNfZNcKLFAXf2nZKdh8HtxqfM79krRMj4DQ7WsYSRNmHwHrc8XooSbUE3HzcpFHA1Xg6nlXmwAv6nI5pvOVl3phwpdK5mGlfh3iXtRXdYq5J5OYJC9MIKf5U3KVRGRnBlquvq88Sb5xKtN9bLpcfhMfmMzxbA4wilOEI5cZaOfXlTcdqfG2meIlHUzfj3QzEZbozJp6seyEDrxghGNDpeafVT803Yo" ] ]
+    },
+    "jwtEncryptionSecret" : {
+      "@class" : "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+      "values" : [ "java.util.HashSet", [ "DKxhX7y365XAWwCv324zOglR0StyPQ4nZjd2GIzdho6Mfz4w" ] ]
+    }
+  }
+}

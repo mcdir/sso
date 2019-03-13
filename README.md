@@ -175,6 +175,11 @@ sso-config-properties [sso-config-properties](http://passport.sso.com:8888/confi
 * shiro-client-demo [shiro client](https://passport.sso.com:8083)
 * sso-management [service management client](https://passport.sso.com:8081/cas-management)
 
+# Swagger
+
+[Swagger API Specification](https://passport.sso.com:8443/cas/v2/api-docs)
+[Swagger UI](https://passport.sso.com:8443/cas/swagger-ui.html)
+
 
 # SSL
 [install keystore-explorer](https://keystore-explorer.org/downloads.html)

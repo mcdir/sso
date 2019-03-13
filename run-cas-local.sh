@@ -50,7 +50,7 @@ tmux send-keys "exec java -jar ./sso-monitor/target/sso-monitor.jar" C-m
 
 tmux selectp -t 3
 #tmux send-keys "exec java -jar ./sso-support/sso-support-captcha/target/sso-support-captcha.jar" C-m
-tmux send-keys "sleep 45 && exec java -jar ./sso-management/target/cas-management.war" C-m
+tmux send-keys "sleep 40 && exec java -jar ./sso-management/target/cas-management.war" C-m
 
 tmux selectp -t 0
 tmux attach -t $session:nano-window
