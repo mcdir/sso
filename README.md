@@ -170,6 +170,7 @@ Build.cmd run
 
 **Run under root**
 
+```bash
 keytool -genkey -keyalg RSA -alias cas -keystore ./tomcat.keystore -storepass 123456 -validity 9999 -keysize 2048 -dname "cn=passport.sso.com, ou=MyOU, o=MyCompany, c=EN, st=Nord, l=MyCity" 
 keytool -genkey -keyalg RSA -alias cas -keystore ./cacerts -storepass changeit -validity 9999 -keysize 2048 -dname "cn=passport.sso.com, ou=MyOU, o=MyCompany, c=EN, st=Nord, l=MyCity"
 ![example](sso-server/build.sh)
@@ -178,6 +179,7 @@ keytool -import -alias passport.sso.com -keystore "%JAVA_HOME%/jre/lib/security/
 keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts" -file ./tomcat.cer -trustcacerts
 keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts" -file ./sso-server/src/main/resources/tomcat.cer -trustcacerts
 keytool -import -alias passport.sso.com -keystore "/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts" -file ./sso-server/src/main/resources/tomcat.cer -trustcacerts
+```
 
 
 ```cmd
